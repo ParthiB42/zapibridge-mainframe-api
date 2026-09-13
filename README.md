@@ -3,7 +3,7 @@
 
 Expose existing CICS/COBOL business services and Db2 data through REST APIs, enabling seamless integration between legacy mainframe systems and modern cloud-native applications.
 
-<img width="2720" height="2080" alt="zapibridge_zos_connect_architecture" src="https://github.com/user-attachments/assets/20785c9c-8137-4096-a3d9-28eb0cb6560c" />
+<img width="1435" height="1096" alt="ChatGPT Image Sep 14, 2026, 03_05_31 AM" src="https://github.com/user-attachments/assets/9e721091-f751-4027-8309-35b6a0a260c3" />
 
 ---
 **🚨 Business Problem**
