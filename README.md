@@ -1,7 +1,8 @@
+--- 
 **ZapiBridge: Mainframe Modernization Platform**
+---
 
 Expose existing CICS/COBOL business services and Db2 data through REST APIs, enabling seamless integration between legacy mainframe systems and modern cloud-native applications.
-
 
 **🚨 Business Problem**
 
@@ -12,12 +13,15 @@ Operational silos — Mainframe and cloud teams work independently, causing misa
 The challenge: Leverage mainframe investments while modernizing the application layer.
 
 ---
-🎯 Objective
+**🎯 Objective**
+---
+
 Build a modernization bridge that:
 Exposes CICS/COBOL logic through REST APIs (using IBM z/OS Connect EE)
 Preserves existing Db2 data — no rewrites, no migration
 Enables real-time integration between modern apps and legacy systems
 Maintains zero disruption to existing operations
+
 ---
 👥 Stakeholders
 Stakeholder	Concern	Success Metric
