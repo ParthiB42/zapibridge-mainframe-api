@@ -25,13 +25,16 @@ Maintains zero disruption to existing operations
 
 ---
 👥 Stakeholders
+---
+
 Stakeholder	Concern	Success Metric
 Cloud Architects	Cloud fit & scalability	Cost efficiency, vendor lock-in risk
 Mainframe SMEs	Stability & compliance	Zero unplanned downtime, audit trail
 Dev Teams	Standard tools & frameworks	API docs, SDK availability, time-to-integrate
 Platform Ops	24/7 reliability	Monitoring, alerting, SLA achievement
+
 ---
-🏗️ Solution Architecture
+**🏗️ Solution Architecture**
 ```
 Modern Apps (Web, Mobile, Microservices)
           ↓ REST/JSON
@@ -49,7 +52,7 @@ z/OS Connect Adapters — Transform JSON ↔ CICS COMMAREA
 Legacy Integration — Direct CICS invocation, Db2 access
 Data Layer — Connection pooling, prepared statements, ACID compliance
 ---
-📊 Application Flow
+**📊 Application Flow**
 ```
 1. Modern App sends REST request (JSON)
 2. API Gateway validates & authenticates
@@ -58,7 +61,7 @@ Data Layer — Connection pooling, prepared statements, ACID compliance
 5. Response returned as JSON to modern app
 ```
 ---
-💾 Database Design
+**💾 Database Design**
 ```sql
 CREATE TABLE CUSTOMER (
   CUST_ID       DECIMAL(10)    PRIMARY KEY,
