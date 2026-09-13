@@ -26,16 +26,6 @@ Enables real-time integration between modern apps and legacy systems
 Maintains zero disruption to existing operations
 
 ---
-👥 Stakeholders
----
-
-Stakeholder	Concern	Success Metric
-Cloud Architects	Cloud fit & scalability	Cost efficiency, vendor lock-in risk
-Mainframe SMEs	Stability & compliance	Zero unplanned downtime, audit trail
-Dev Teams	Standard tools & frameworks	API docs, SDK availability, time-to-integrate
-Platform Ops	24/7 reliability	Monitoring, alerting, SLA achievement
-
----
 **🏗️ Solution Architecture**
 ```
 Modern Apps (Web, Mobile, Microservices)
