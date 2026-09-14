@@ -1,6 +1,6 @@
-# 🛍️ ZapiBridge | Mainframe Modernization Platform
+<img width="1435" height="1096" alt="ZapiBridge_Flow" src="https://github.com/user-attachments/assets/88d7b544-face-4dcb-8b25-8cc8413daf18" /># 🛍️ ZapiBridge | Mainframe Modernization Platform
 <p align="center">
-  <img src="ZapiBridge_Flow.png" width="100%">
+  <img src="<img width="1435" height="1096" alt="ZapiBridge_Flow" src="https://github.com/user-attachments/assets/136acd09-1d19-4922-8a60-834dcf73d48a" />" width="100%">
 </p>
 
 ## 📌 Executive Summary 
