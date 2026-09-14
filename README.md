@@ -37,15 +37,12 @@ Organizations struggle to integrate mature mainframe systems with modern applica
 
 Modern Apps (Web, Mobile, Microservices)
           ↓ REST/JSON
-
     ZapiBridge API Gateway
     (Auth, routing, validation)
           ↓ SOAP/HTTPS
-
 IBM z/OS Connect Service Adapters
 (REST → CICS/COBOL bridging)
           ↓ Native CICS calls
-
 Legacy Systems (CICS, COBOL, Db2)
 
 ## Key Components:
