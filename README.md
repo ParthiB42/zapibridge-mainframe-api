@@ -49,7 +49,7 @@ Organizations struggle to integrate mature mainframe systems with modern applica
 
 # 📊 Application Flow:
 
-1. Modern App sends REST request (JSON)
+1. Modern Web Apps ends REST request (JSON)
 2. API Gateway validates & authenticates
 3. z/OS Adapter transforms JSON → CICS COMMAREA
 4. Mainframe processes (COBOL logic + Db2 queries)
@@ -120,3 +120,53 @@ Organizations struggle to integrate mature mainframe systems with modern applica
 - Postman / REST Clients
 
 ---
+
+## 📊 Results & Key Outcomes
+
+The project demonstrates how an existing COBOL/CICS application can be integrated with modern applications through REST APIs while retaining the underlying Mainframe business logic and Db2 data.
+
+### 🔍 Key Outcomes
+
+- 🔗 **COBOL/CICS API Enablement:** Exposed the `EMPPOR01` COBOL/CICS application through IBM z/OS Connect EE, making Mainframe functionality accessible through REST APIs.
+
+- 🗄️ **Db2 Integration:** Integrated the application with three Db2 tables — `EMP_LOGIN`, `EMP_DETAILS`, and `EMP_EMPLOYMENT` — to validate employees and retrieve profile and employment information.
+
+- 🔄 **JSON ↔ COMMAREA Integration:** Established communication between modern REST/JSON requests and the CICS `DFHCOMMAREA` used by the COBOL application.
+
+- 👤 **Employee Profile Retrieval:** Enabled modern applications to retrieve employee personal and employment information through a REST API.
+
+- ✏️ **Profile Update Capability:** Implemented update processing for employee personal email, mobile number, emergency contact, and address while retaining existing values for fields that are not being changed.
+
+- 🌐 **Modern Web Integration:** Created a foundation for connecting a modern web-based Employee Self-Service portal with Mainframe APIs.
+
+- ♻️ **Business Logic Reuse:** Retained the existing COBOL/CICS business logic instead of replacing the Mainframe application with a new application stack.
+
+### 💡 Modernization Benefits
+
+- 🎯 **Reduced Rewrite Risk:** Existing COBOL business logic continues to run on CICS.
+
+- 🔌 **API Accessibility:** Mainframe functionality can be consumed using standard REST/JSON interfaces.
+
+- 🛡️ **Preserved Mainframe Investment:** Existing CICS and Db2 infrastructure remains part of the solution.
+
+- 🚀 **Modern Application Integration:** Web applications can interact with Mainframe services without directly accessing CICS or Db2.
+
+- 📈 **Extensible Architecture:** The same API enablement approach can be extended to additional COBOL/CICS business services.
+
+---
+
+**Status:** 🚧 Mainframe Modernization / Proof of Concept
+
+**Core Application:** `EMPPOR01`
+
+**API Platform:** IBM z/OS Connect EE
+
+**Transaction Processing:** IBM CICS
+
+**Database:** IBM Db2 for z/OS
+
+**Integration:** REST / JSON ↔ CICS COMMAREA
+
+**Source Control:** Git / GitHub
+
+**Last Updated:** September 2026
