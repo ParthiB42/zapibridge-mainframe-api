@@ -1,0 +1,197 @@
+openapi: 3.0.3
+
+info:
+  title: ZapiBridge Employee Portal API
+  description: >
+    REST API for accessing employee profile and employment
+    information through IBM z/OS Connect EE, CICS, COBOL,
+    and IBM Db2.
+  version: 1.0.0
+
+servers:
+  - url: http://<ZOS-CONNECT-HOST>:9080
+
+tags:
+  - name: Employee
+    description: Employee profile services
+
+
+paths:
+
+  /Zapibridge/login/{employeeId}:
+
+    get:
+
+      tags:
+        - Employee
+
+      summary: Get Employee Profile
+
+      description: >
+        Validates the Employee ID and Date of Birth and retrieves
+        employee personal and employment information from the
+        Mainframe application.
+
+      parameters:
+
+        - name: employeeId
+          in: path
+          required: true
+
+          description: Employee identifier
+
+          schema:
+            type: string
+            example: EMP101
+
+        - name: dob
+          in: query
+          required: true
+
+          description: Employee date of birth
+
+          schema:
+            type: string
+            format: date
+            example: 1990-05-15
+
+      responses:
+
+        '200':
+          description: Employee information retrieved successfully
+
+          content:
+
+            application/json:
+
+              example:
+
+                DFHCOMMAREA:
+
+                  CA_EMP_ID: EMP101
+
+                  CA_STATUS: SUCCESS
+
+                  CA_MESSAGE: Employee details retrieved
+
+                  CA_FIRST_NAME: ARUN
+
+                  CA_LAST_NAME: KUMAR
+
+                  CA_DOB_OUT: "1990-05-15"
+
+                  CA_GENDER: M
+
+                  CA_BLOOD_GROUP: O+
+
+                  CA_NATIONALITY: INDIAN
+
+                  CA_MARITAL_STATUS: MARRIED
+
+                  CA_PERSONAL_EMAIL: ARUN.KUMAR@GMAIL.COM
+
+                  CA_WORK_EMAIL: ARUN.KUMAR@CORPTECH.IN
+
+                  CA_MOBILE: "9876543210"
+
+                  CA_EMERGENCY_CONTACT: "PRIYA KUMAR - 9876500001"
+
+                  CA_OFFICE_LOCATION: "TEXES,USA"
+
+                  CA_ADDRESS: "12 ANNA NAGAR, CHENNAI - 600040"
+
+                  CA_DESIGNATION: SENIOR SOFTWARE ENGINEER
+
+                  CA_DEPARTMENT: TECHNOLOGY
+
+                  CA_DIVISION: APPLICATION DEVELOPMENT
+
+                  CA_EMPLOYMENT_TYPE: PERMANENT
+
+                  CA_DATE_OF_JOINING: "2018-06-11"
+
+                  CA_PROBATION_STATUS: COMPLETED
+
+                  CA_REPORTING_MANAGER: RAJESH KUMAR
+
+                  CA_WORK_LOCATION: "CHENNAI, TAMIL NADU"
+
+                  CA_GRADE: L3
+
+                  CA_TENURE_YEARS: "008"
+
+        '400':
+          description: Invalid request
+
+        '500':
+          description: Mainframe or Db2 processing error
+
+
+  /Zapibridge/employee/{employeeId}/profile:
+
+    put:
+
+      tags:
+        - Employee
+
+      summary: Update Employee Profile
+
+      description: >
+        Updates selected employee profile fields through
+        the EMPPOR01 COBOL/CICS program.
+
+      parameters:
+
+        - name: employeeId
+          in: path
+          required: true
+
+          description: Employee identifier
+
+          schema:
+            type: string
+            example: EMP101
+
+      requestBody:
+
+        required: true
+
+        content:
+
+          application/json:
+
+            schema:
+
+              type: object
+
+              properties:
+
+                personalEmail:
+                  type: string
+                  example: newmail@example.com
+
+                mobile:
+                  type: string
+                  example: "9999999999"
+
+                emergencyContact:
+                  type: string
+                  example: "PRIYA KUMAR - 9999999999"
+
+                address:
+                  type: string
+                  example: "NEW ADDRESS, CHENNAI"
+
+      responses:
+
+        '200':
+          description: Employee profile updated successfully
+
+        '400':
+          description: Invalid update request
+
+        '404':
+          description: Employee not found
+
+        '500':
+          description: Mainframe or Db2 processing error
