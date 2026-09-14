@@ -1,4 +1,4 @@
-# 🛍️ ZapiBridge | Mainframe Modernization Platform
+# 🔗 🌐 ZapiBridge | Mainframe Modernization Platform
 <p align="center">
   <img src="<img width="1435" height="1096" alt="ZapiBridge_Flow" src="https://github.com/user-attachments/assets/136acd09-1d19-4922-8a60-834dcf73d48a" />" width="100%">
 </p>
@@ -8,10 +8,8 @@
 ZapiBridge modernizes an existing Mainframe application by exposing COBOL/CICS business logic and Db2 data as REST APIs using IBM z/OS Connect EE. The project demonstrates how modern web applications can interact with reliable Mainframe systems through REST/JSON interfaces while preserving the underlying COBOL business logic.
 
 - 🎯 **Business Problem:** Mainframe applications contain critical business logic, but modern applications require REST/JSON interfaces. Integrating directly with CICS/COBOL applications can be complex, and rewriting established Mainframe systems can be costly and risky.
-
 - 🛠️ **Approach:** Developed `EMPPOR01` using COBOL, CICS, and Db2; exposed the program through IBM z/OS Connect EE; and integrated the resulting APIs with a modern employee portal for profile retrieval and updates.
-
-- 📊 **Business Impact:** Enabled modern REST-based access to Mainframe employee data, demonstrated a practical API-led modernization approach, preserved existing business logic, and created a reusable foundation for additional Mainframe APIs.
+- 📊 **Business Impact:** Enabled modern REST-based access to Mainframe employee data, demonstrated a practical API-led modernization approach, preserved existing business logic, and created a reusable foundation for additional Mainframe APIs. vvvv
 
 ---
 
