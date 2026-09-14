@@ -1,4 +1,4 @@
-<span style="font-size:26px;">ZapiBridge: Mainframe Modernization Platform</span>
+<span style="font-size:30px;">ZapiBridge: Mainframe Modernization Platform</span>
 ---
 
 Expose existing CICS/COBOL business services and Db2 data through REST APIs, enabling seamless integration between legacy mainframe systems and modern cloud-native applications.
